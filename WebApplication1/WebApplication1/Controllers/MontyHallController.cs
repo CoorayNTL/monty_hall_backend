@@ -11,7 +11,6 @@ namespace MontyHallAPI.Controllers
     {
 
 
-
         private readonly DataContext _context;
 
         public MontyHallController(DataContext context)
@@ -22,7 +21,15 @@ namespace MontyHallAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<SimulationResult>>> GetMontyHalles()
         {
-            return Ok(await _context.SimulationResults.ToListAsync());
+            // Use Entity Framework to retrieve data from the database
+            var simulationResults = await _context.SimulationResults.ToListAsync();
+
+            if (simulationResults == null || simulationResults.Count == 0)
+            {
+                return NoContent(); // Return a 204 No Content response if there is no data
+            }
+
+            return Ok(simulationResults); 
         }
 
         [HttpPost("simulate")]
