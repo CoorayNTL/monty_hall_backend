@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\monty-hall-backend.props" />
+</Project>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8epYNrlfLyCqHK88YpF42xnBwFo4dSzwbgJbQZToLGg=",
+  "Source": "monty-hall-backend",
+  "BasePath": "_content/monty-hall-backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
